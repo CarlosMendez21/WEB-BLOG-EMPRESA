@@ -1,0 +1,281 @@
+
+/* CABECERA DEL ARTÍCULO */
+
+.back-link {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.back-link:hover {
+    color: var(--green-dark);
+}
+
+.article-header {
+    padding-top: 65px;
+    padding-bottom: 40px;
+}
+
+.breadcrumbs {
+    margin-bottom: 30px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.breadcrumbs a:hover {
+    color: var(--green-dark);
+}
+
+.article-header h1 {
+    max-width: 900px;
+    font-family: "Manrope", Arial, sans-serif;
+    font-size: clamp(38px, 5.5vw, 65px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -3px;
+}
+
+.article-description {
+    max-width: 760px;
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* AUTOR */
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.author-avatar {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--green);
+    font-weight: 800;
+}
+
+.author strong {
+    font-size: 12px;
+}
+
+.author p {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* DISTRIBUCIÓN */
+
+.article-layout {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 720px);
+    justify-content: center;
+    gap: 60px;
+    padding-top: 40px;
+    padding-bottom: 90px;
+}
+
+.article-toc {
+    align-self: start;
+    position: sticky;
+    top: 100px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.article-toc h2 {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.article-toc a {
+    display: block;
+    padding: 7px 0;
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.article-toc a:hover {
+    color: var(--green-dark);
+}
+
+/* CONTENIDO */
+
+.article-content {
+    min-width: 0;
+    color: #49554c;
+    font-size: 15px;
+    line-height: 1.95;
+}
+
+.article-content p {
+    margin-bottom: 20px;
+}
+
+.article-content .article-lead {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.article-content h2 {
+    margin: 44px 0 15px;
+    font-family: "Manrope", Arial, sans-serif;
+    font-size: 29px;
+    line-height: 1.25;
+    letter-spacing: -1px;
+    color: var(--text);
+    scroll-margin-top: 100px;
+}
+
+.article-content h3 {
+    margin: 25px 0 10px;
+    font-size: 18px;
+    color: var(--text);
+}
+
+.article-content ul {
+    padding-left: 24px;
+    margin-bottom: 24px;
+}
+
+.article-content li {
+    margin-bottom: 8px;
+}
+
+.article-content a {
+    color: #557b31;
+    font-weight: 700;
+}
+
+.article-content blockquote {
+    margin: 30px 0;
+    padding: 5px 0 5px 20px;
+    border-left: 3px solid var(--green-dark);
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #506b3d;
+}
+
+/* BLOQUES DESTACADOS */
+
+.article-callout {
+    margin: 25px 0;
+    padding: 22px;
+    border-left: 3px solid var(--green-dark);
+    border-radius: 0 8px 8px 0;
+    background: #e8efdf;
+    color: #394736;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.article-callout strong {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--text);
+}
+
+.article-callout p {
+    margin: 5px 0 12px;
+}
+
+.article-callout ul {
+    margin: 10px 0 0;
+}
+
+.article-end {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+}
+
+/* RELACIONADOS */
+
+.related {
+    padding-top: 55px;
+    padding-bottom: 65px;
+    border-top: 1px solid var(--border);
+}
+
+.related h2 {
+    margin-bottom: 20px;
+    font-family: "Manrope", Arial, sans-serif;
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.related-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.related-links a {
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.related-links a:hover {
+    border-color: var(--green-dark);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .article-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .article-toc {
+        position: static;
+    }
+
+    .related-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .article-header {
+        padding-top: 40px;
+    }
+
+    .article-header h1 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .article-description {
+        font-size: 14px;
+    }
+
+    .article-content {
+        font-size: 14px;
+    }
+
+    .article-content h2 {
+        font-size: 25px;
+    }
+
+    .article-layout {
+        padding-bottom: 60px;
+    }
+}

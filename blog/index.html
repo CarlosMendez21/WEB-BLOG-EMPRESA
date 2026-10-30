@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Ideas, recursos y estrategia para mejorar tu contenido en redes sociales.">
+
+    <title>Blog | Nexo Social</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="../web/index.html" class="logo">
+                <span class="logo-icon">N</span>
+                nexo<span>social</span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="nav-links">
+                ☰
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="../web/index.html">Inicio</a>
+                <a href="../web/index.html#servicios">Servicios</a>
+                <a href="index.html#articulos" class="active">Blog</a>
+                <a href="../web/index.html#contacto" class="nav-cta">
+                    Hablemos ↗
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PRESENTACIÓN -->
+        <section class="hero container">
+            <div class="hero-content">
+                <p class="eyebrow">
+                    NEXO SOCIAL · IDEAS QUE CONECTAN
+                </p>
+
+                <h1>
+                    Menos ruido.<br>
+                    <span>Más intención.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Ideas, recursos y perspectivas para construir
+                    una presencia en redes sociales que tenga
+                    sentido para tu negocio.
+                </p>
+
+                <a href="#articulos" class="button">
+                    Explorar artículos ↓
+                </a>
+            </div>
+
+            <aside class="hero-note">
+                <span class="note-icon">✳</span>
+                <h2>Contenido con propósito.</h2>
+                <p>
+                    Estrategia, creatividad, tendencias y análisis.
+                    Sin fórmulas mágicas ni promesas de viralidad.
+                </p>
+            </aside>
+        </section>
+
+        <!-- ARTÍCULOS -->
+        <section class="articles-section container"
+                 id="articulos">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">NUESTRO BLOG</p>
+                    <h2>Ideas para hacer crecer tu marca.</h2>
+                </div>
+
+                <p id="results-count" class="results-count"
+                   aria-live="polite">
+                    5 artículos
+                </p>
+            </div>
+
+            <!-- FILTROS -->
+            <div class="filters" aria-label="Filtrar artículos">
+
+                <button class="filter active"
+                        data-filter="todos"
+                        aria-pressed="true">
+                    Todos
+                </button>
+
+                <button class="filter"
+                        data-filter="estrategia"
+                        aria-pressed="false">
+                    Estrategia
+                </button>
+
+                <button class="filter"
+                        data-filter="tendencias"
+                        aria-pressed="false">
+                    Tendencias
+                </button>
+
+                <button class="filter"
+                        data-filter="creatividad"
+                        aria-pressed="false">
+                    Creatividad
+                </button>
+
+                <button class="filter"
+                        data-filter="analisis"
+                        aria-pressed="false">
+                    Análisis
+                </button>
+
+                <button class="filter"
+                        data-filter="negocio"
+                        aria-pressed="false">
+                    Negocio
+                </button>
+
+            </div>
+
+            <!-- GRID DE ARTÍCULOS -->
+            <div class="articles-grid">
+
+                <!-- ARTÍCULO 1 -->
+                <article class="article-card"
+                         data-category="estrategia">
+
+                    <a href="posts/guia-contenido-redes.html"
+                       class="article-cover cover-green">
+                        <span class="cover-label">ESTRATEGIA</span>
+                        <span class="cover-title">
+                            CONTENT<br>WITH INTENT
+                        </span>
+                    </a>
+
+                    <div class="article-info">
+                        <div class="article-meta">
+                            ESTRATEGIA · 6 MIN
+                        </div>
+
+                        <h3>
+                            <a href="posts/guia-contenido-redes.html">
+                                Una estrategia de contenido empieza
+                                con mejores preguntas
+                            </a>
+                        </h3>
+
+                        <p>
+                            Antes de publicar más, entiende qué
+                            quieres conseguir y a quién quieres llegar.
+                        </p>
+
+                        <a class="read-more"
+                           href="posts/guia-contenido-redes.html">
+                            Leer artículo <span>↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 2 -->
+                <article class="article-card"
+                         data-category="tendencias">
+
+                    <a href="posts/tendencias-marca.html"
+                       class="article-cover cover-dark">
+                        <span class="cover-label">TENDENCIAS</span>
+                        <span class="cover-title">
+                            THINK<br>DIFFERENT
+                        </span>
+                    </a>
+
+                    <div class="article-info">
+                        <div class="article-meta">
+                            TENDENCIAS · 5 MIN
+                        </div>
+
+                        <h3>
+                            <a href="posts/tendencias-marca.html">
+                                Cómo aprovechar las tendencias sin
+                                perder la identidad de marca
+                            </a>
+                        </h3>
+
+                        <p>
+                            Aprende a adaptar tendencias sin dejar
+                            de ser fiel a tu marca.
+                        </p>
+
+                        <a class="read-more"
+                           href="posts/tendencias-marca.html">
+                            Leer artículo <span>↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 3 -->
+                <article class="article-card"
+                         data-category="creatividad">
+
+                    <a href="posts/guiones-video.html"
+                       class="article-cover cover-peach">
+                        <span class="cover-label">CREATIVIDAD</span>
+                        <span class="cover-title">
+                            IDEAS<br>IN MOTION
+                        </span>
+                    </a>
+
+                    <div class="article-info">
+                        <div class="article-meta">
+                            CREATIVIDAD · 7 MIN
+                        </div>
+
+                        <h3>
+                            <a href="posts/guiones-video.html">
+                                Cómo estructurar un guion para
+                                vídeo corto que aporte valor
+                            </a>
+                        </h3>
+
+                        <p>
+                            Gancho, desarrollo y cierre:
+                            organiza tus ideas con intención.
+                        </p>
+
+                        <a class="read-more"
+                           href="posts/guiones-video.html">
+                            Leer artículo <span>↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 4 -->
+                <article class="article-card"
+                         data-category="analisis">
+
+                    <a href="posts/metricas-redes.html"
+                       class="article-cover cover-lilac">
+                        <span class="cover-label">ANÁLISIS</span>
+                        <span class="cover-title">
+                            DATA<br>MATTERS
+                        </span>
+                    </a>
+
+                    <div class="article-info">
+                        <div class="article-meta">
+                            ANÁLISIS · 6 MIN
+                        </div>
+
+                        <h3>
+                            <a href="posts/metricas-redes.html">
+                                Qué métricas mirar para mejorar
+                                tu contenido en redes
+                            </a>
+                        </h3>
+
+                        <p>
+                            Interpreta tus resultados y convierte
+                            los datos en decisiones.
+                        </p>
+
+                        <a class="read-more"
+                           href="posts/metricas-redes.html">
+                            Leer artículo <span>↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 5 -->
+                <article class="article-card"
+                         data-category="negocio">
+
+                    <a href="posts/briefing-contenido.html"
+                       class="article-cover cover-blue">
+                        <span class="cover-label">NEGOCIO</span>
+                        <span class="cover-title">
+                            PLAN<br>TO CREATE
+                        </span>
+                    </a>
+
+                    <div class="article-info">
+                        <div class="article-meta">
+                            NEGOCIO · 4 MIN
+                        </div>
+
+                        <h3>
+                            <a href="posts/briefing-contenido.html">
+                                El briefing que facilita crear
+                                contenido para una pequeña empresa
+                            </a>
+                        </h3>
+
+                        <p>
+                            Organiza objetivos, entregables y
+                            responsabilidades antes de producir.
+                        </p>
+
+                        <a class="read-more"
+                           href="posts/briefing-contenido.html">
+                            Leer artículo <span>↗</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="empty-message" id="empty-message" hidden>
+                No hay artículos en esta categoría.
+            </p>
+
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container cta-inner">
+                <div>
+                    <p class="eyebrow">¿HABLAMOS?</p>
+                    <h2>
+                        Tu marca tiene algo que contar.
+                    </h2>
+                    <p>
+                        Construyamos una estrategia de contenido
+                        alineada con tus objetivos.
+                    </p>
+                </div>
+
+                <a href="../web/index.html#contacto" class="button button-dark">
+                    Hablemos de tu marca ↗
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a href="../web/index.html" class="logo logo-footer">
+                <span class="logo-icon">N</span>
+                nexo<span>social</span>
+            </a>
+
+            <p>
+                Contenido con estrategia.<br>
+                Marcas con personalidad.
+            </p>
+
+            <div class="footer-bottom">
+                <span>
+                    © <span id="year"></span> Nexo Social
+                </span>
+                <a href="../web/index.html">Volver al inicio ↑</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
