@@ -66,7 +66,7 @@ a {
 .brand>span:last-child {
   font-weight: 500;
   color: #78837b;
-  margin-left: -8px;
+  margin-left:0
 }
 
 .brand-mark {
@@ -657,6 +657,101 @@ a {
   color: #7d887e!important;
 }
 
+.team-section {
+  background: #e8eee1;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 16px;
+}
+
+.team-card {
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fafbf7;
+}
+
+.team-initials {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green);
+  font: 800 13px Manrope,sans-serif;
+}
+
+.team-card h3 {
+  margin: 20px 0 5px;
+  font: 700 20px Manrope,sans-serif;
+}
+
+.team-card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.team-card .team-role {
+  margin-top: 0;
+  color: #557b31;
+  font-weight: 700;
+}
+
+.team-note,
+.commitment-note {
+  max-width: 850px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.commitment-grid {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 14px;
+}
+
+.commitment-card {
+  padding: 23px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fafbf7;
+}
+
+.commitment-card-featured {
+  border-color: var(--green);
+  background: var(--green);
+}
+
+.commitment-label {
+  color: #557b31;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.commitment-card h3 {
+  margin: 18px 0 10px;
+  font: 700 17px/1.35 Manrope,sans-serif;
+}
+
+.commitment-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.commitment-card-featured p {
+  color: #45523e;
+}
+
 .contact-section {
   background: #e8eee1;
 }
@@ -809,6 +904,10 @@ a {
     grid-template-columns: repeat(2,1fr);
   }
 
+  .commitment-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
   .method-layout,.about-grid,.contact-layout {
     grid-template-columns: 1fr;
     gap: 55px;
@@ -944,6 +1043,10 @@ a {
   }
 
   .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid,.commitment-grid {
     grid-template-columns: 1fr;
   }
 
