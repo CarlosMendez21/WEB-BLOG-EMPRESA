@@ -9,6 +9,7 @@
   --green: #c6f579;
   --green-dark: #557b31;
   --border: #dfe4db;
+  --ease-out: cubic-bezier(.2, .75, .25, 1);
   font-family: "DM Sans", Arial, sans-serif;
 }
 
@@ -95,7 +96,26 @@ button {
 }
 
 .nav-links > a:not(.nav-cta) {
+  position: relative;
   color: #536058;
+  transition: color 0.25s var(--ease-out);
+}
+
+.nav-links > a:not(.nav-cta)::after {
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+  height: 1px;
+  background: currentcolor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.nav-links > a:not(.nav-cta):hover::after {
+  transform: scaleX(1);
 }
 
 .nav-links > a:hover,
@@ -109,6 +129,12 @@ button {
   border-radius: 7px;
   background: var(--text);
   color: var(--white);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.nav-links .nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px rgb(23 33 29 / 18%);
 }
 
 .menu-toggle {
@@ -185,13 +211,21 @@ button {
   font-weight: 700;
   box-shadow: 0 9px 18px rgb(23 33 29 / 12%);
   transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+    transform 0.3s var(--ease-out),
+    box-shadow 0.3s var(--ease-out);
 }
 
 .button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgb(23 33 29 / 18%);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgb(23 33 29 / 20%);
+}
+
+.button span {
+  transition: transform 0.3s var(--ease-out);
+}
+
+.button:hover span {
+  transform: translate(2px, -2px);
 }
 
 .hero-note {
@@ -206,6 +240,12 @@ button {
     #1d2b24;
   color: var(--white);
   box-shadow: 0 25px 60px rgb(23 33 29 / 14%);
+  transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out);
+}
+
+.hero-note:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 32px 70px rgb(23 33 29 / 20%);
 }
 
 .hero-note::after {
@@ -329,15 +369,15 @@ button {
   background: var(--white);
   box-shadow: 0 14px 36px rgb(23 33 29 / 7%);
   transition:
-    transform 0.2s,
-    border-color 0.2s,
-    box-shadow 0.2s;
+    transform 0.35s var(--ease-out),
+    border-color 0.35s var(--ease-out),
+    box-shadow 0.35s var(--ease-out);
 }
 
 .article-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   border-color: #a9c581;
-  box-shadow: 0 22px 48px rgb(23 33 29 / 12%);
+  box-shadow: 0 24px 52px rgb(23 33 29 / 15%);
 }
 
 .article-cover {
@@ -348,6 +388,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   padding: 26px;
+  transition: background-size 0.5s var(--ease-out);
 }
 
 .article-cover::after {
@@ -414,6 +455,11 @@ button {
   font-weight: 800;
   letter-spacing: -2.5px;
   line-height: 1;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.article-card:hover .cover-title {
+  transform: translateY(-4px);
 }
 
 .article-info {
@@ -469,6 +515,14 @@ button {
   color: var(--green-dark);
   font-size: 12px;
   font-weight: 700;
+}
+
+.read-more span {
+  transition: transform 0.3s var(--ease-out);
+}
+
+.read-more:hover span {
+  transform: translate(3px, -3px);
 }
 
 .empty-message {
@@ -554,6 +608,33 @@ button {
   color: var(--muted);
   font-size: 12px;
   font-weight: 700;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s var(--ease-out), transform 0.65s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-content[data-reveal] {
+  transform: translateY(16px);
+}
+
+.hero-content[data-reveal].is-visible {
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  .article-card:hover,
+  .hero-note:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 850px) {
@@ -684,5 +765,32 @@ button {
   .footer-bottom {
     flex-direction: column;
     gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-note:hover,
+  .article-card:hover,
+  .article-card:hover .cover-title,
+  .button:hover,
+  .button:hover span,
+  .nav-links .nav-cta:hover,
+  .read-more:hover span {
+    transform: none;
   }
 }
