@@ -1,6 +1,8 @@
+// Controla el menú móvil y lo cierra al elegir una sección de la página.
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
+// Sincroniza el estado visual del menú con su nombre y atributo accesible.
 menuToggle.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
@@ -17,14 +19,17 @@ navLinks.querySelectorAll("a").forEach((link) => {
   });
 });
 
+// Mantiene actualizado el año del pie de página sin editar el HTML cada año.
 document.querySelector("#year").textContent = new Date().getFullYear();
 
+// El formulario genera un borrador de correo local; no transmite datos a un servidor.
 const contactForm = document.querySelector("#contact-form");
 const formMessage = document.querySelector("#form-message");
 
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  // Recoge los tres campos del formulario antes de preparar el borrador de correo.
   const formData = new FormData(contactForm);
   const name = formData.get("name").trim();
   const email = formData.get("email").trim();
@@ -37,10 +42,12 @@ contactForm.addEventListener("submit", (event) => {
     `Nombre: ${name}\nEmail: ${email}\n\nProyecto:\n${business}`
   );
 
+  // La ventana de correo queda bajo control de la persona que consulta.
   formMessage.textContent = "Se abrirá tu aplicación de correo. Revisa el destinatario antes de enviar.";
   window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
 });
 
+// Elementos que entran suavemente en pantalla al desplazarse por la página.
 const revealTargets = document.querySelectorAll(
   ".hero-copy, .service-card, .step, .about-art, .about-copy, .team-card, .commitment-card, .contact-form",
 );
@@ -64,10 +71,12 @@ if (!prefersReducedMotion) {
     );
   });
 
+  // Solo se revisan elementos pendientes y se desregistran eventos al terminar.
   const pendingReveals = new Set(revealTargets);
   let revealCheckScheduled = false;
 
   const revealVisibleElements = () => {
+    // Los elementos se muestran al entrar en pantalla y se retiran del conjunto pendiente.
     pendingReveals.forEach((element) => {
       const { top, bottom } = element.getBoundingClientRect();
 

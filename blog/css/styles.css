@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 
+/* Colores, tipografía y ritmo visual compartidos por el blog y sus tarjetas. */
 :root {
   color-scheme: light;
   --text: #17211d;
@@ -13,6 +14,7 @@
   font-family: "DM Sans", Arial, sans-serif;
 }
 
+/* Base común de tamaño, lectura y apariencia de los enlaces del sitio. */
 * {
   box-sizing: border-box;
 }
@@ -45,6 +47,7 @@ button {
   margin-inline: auto;
 }
 
+/* Cabecera fija y navegación común al índice y a las páginas de artículos. */
 .header {
   position: sticky;
   z-index: 20;
@@ -146,6 +149,7 @@ button {
   font-size: 24px;
 }
 
+/* Presentación editorial del blog y llamada a explorar las publicaciones. */
 .hero {
   position: relative;
   display: grid;
@@ -294,6 +298,7 @@ button {
   line-height: 1.85;
 }
 
+/* Listado de artículos: contador, tarjetas, portada gráfica y metadatos. */
 .articles-section {
   padding-block: 68px 104px;
   border-top: 1px solid rgb(23 33 29 / 8%);
@@ -327,6 +332,7 @@ button {
   font-size: 12px;
 }
 
+/* Controles de filtro disponibles si se añaden filtros interactivos al índice. */
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -436,6 +442,7 @@ button {
   color: #294d58;
 }
 
+/* Diferencia categorías de portada sin depender solo del texto del artículo. */
 .cover-label {
   width: fit-content;
   padding: 7px 10px;
@@ -531,6 +538,7 @@ button {
   font-size: 14px;
 }
 
+/* Área final de contacto y pie de página compartidos por las vistas del blog. */
 .cta-section {
   padding-block: 70px;
   background: var(--green);
@@ -610,6 +618,7 @@ button {
   font-weight: 700;
 }
 
+/* Estado inicial y transición de los elementos que aparecen al desplazarse. */
 [data-reveal] {
   opacity: 0;
   transform: translateY(20px);
@@ -637,6 +646,7 @@ button {
   }
 }
 
+/* Reorganiza tarjetas y bloques para pantallas intermedias. */
 @media (max-width: 850px) {
   .hero {
     grid-template-columns: 1fr 0.8fr;
@@ -768,6 +778,7 @@ button {
   }
 }
 
+/* Desactiva animaciones cuando la persona solicita movimiento reducido. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

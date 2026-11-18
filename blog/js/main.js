@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // El menú solo existe en el índice del blog; los artículos ofrecen un enlace de regreso.
   const menuToggle = document.querySelector("#menu-toggle");
   const navLinks = document.querySelector("#nav-links");
 
   if (menuToggle && navLinks) {
+    // Mantiene icono, etiqueta accesible y estado desplegado en sincronía.
     menuToggle.addEventListener("click", () => {
       const isOpen = navLinks.classList.toggle("open");
 
@@ -24,12 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Completa el año del pie de página en las páginas que incluyen ese marcador.
   const yearElement = document.querySelector("#year");
 
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
 
+  // Aplica revelado progresivo a la presentación, las tarjetas y la llamada final.
   const revealTargets = document.querySelectorAll(
     ".hero-content, .hero-note, .section-heading, .article-card, .cta-inner",
   );
@@ -51,10 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
 
+    // Conserva solo los elementos pendientes para dejar de escuchar eventos al final.
     const pendingReveals = new Set(revealTargets);
     let revealCheckScheduled = false;
 
     const revealVisibleElements = () => {
+      // Solo activa las animaciones de elementos que ya son visibles en el viewport.
       pendingReveals.forEach((element) => {
         const { top, bottom } = element.getBoundingClientRect();
 
@@ -76,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       revealCheckScheduled = true;
+      // Agrupa cálculos de scroll y resize en el siguiente frame de renderizado.
       window.requestAnimationFrame(() => {
         revealCheckScheduled = false;
         revealVisibleElements();

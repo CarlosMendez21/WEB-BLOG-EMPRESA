@@ -1,45 +1,73 @@
 # MARKIFAST — Sitio web y blog
 
-Sitio web y blog para MARKIFAST, un proyecto de agencia de marketing digital con sede prevista en Vitoria-Gasteiz. Analiza tendencias y formatos en redes sociales con apoyo de IA, crea ideas y guiones personalizados, coordina la producción audiovisual con profesionales freelance y mejora las estrategias a partir de métricas, siempre con supervisión humana.
+Proyecto de web corporativa y blog para MARKIFAST, una agencia de marketing digital con sede prevista en Vitoria-Gasteiz. La empresa se dirige a autónomos y pymes: analiza tendencias con apoyo de IA, prepara ideas y guiones personalizados, coordina la producción audiovisual con profesionales freelance y revisa los resultados con supervisión humana.
 
-La página principal resume también el equipo promotor, el modelo de trabajo, la forma jurídica propuesta y los compromisos de MARKIFAST con los ODS, el uso responsable de la IA y la presencia del euskera en redes sociales.
+La web presenta los servicios, el método de trabajo, el equipo promotor, el modelo empresarial previsto y los compromisos con la innovación responsable, los ODS y la presencia del euskera en redes sociales. El blog reúne guías prácticas relacionadas con la estrategia y la creación de contenido.
 
-## Estructura
+## Estructura del proyecto
 
 ```text
 .
-├── index.html
+├── index.html                 # Entrada que redirige a la web corporativa
 ├── web/
-│   ├── index.html
+│   ├── index.html              # Página principal de MARKIFAST
+│   ├── README.md               # Esta documentación
 │   ├── css/
-│   │   └── styles.css
+│   │   └── styles.css          # Diseño responsive de la web
 │   └── js/
-│       └── main.js
+│       └── main.js             # Menú, formulario mailto y animaciones
 └── blog/
-    ├── index.html
+    ├── index.html              # Listado de los artículos
     ├── css/
-    │   ├── styles.css
-    │   └── articles.css
+    │   ├── styles.css          # Estilos compartidos del blog
+    │   └── articles.css        # Estilos de lectura de cada artículo
     ├── js/
-    │   └── main.js
-    └── posts/
-        └── guia-contenido-redes.html
+    │   └── main.js             # Menú móvil, año y efectos de entrada
+    └── posts/                  # Artículos HTML individuales
 ```
 
-## Ejecutar
+### Artículos del blog (15 publicaciones)
 
-Abre el `index.html` de la raíz para entrar en la web corporativa. La navegación enlaza la página principal, el blog y el primer artículo. Los siguientes artículos se incorporarán de forma individual. Para desarrollo, puedes usar la extensión **Live Server** de Visual Studio Code.
+- `adaptar-tendencias-marca.html`: adaptar formatos populares sin copiar.
+- `brief-produccion-freelance.html`: preparar instrucciones para una producción externa.
+- `calendario-editorial-realista.html`: planificar publicaciones con un ritmo sostenible.
+- `campana-lanzamiento-redes.html`: organizar el contenido para presentar una novedad.
+- `contenido-euskera-marca.html`: comunicar en euskera con una voz natural.
+- `contenido-local-comunidad.html`: conectar el contenido con la comunidad local.
+- `elegir-redes-sociales-negocio.html`: seleccionar canales según audiencia y recursos.
+- `guia-contenido-redes.html`: definir objetivos, audiencia, temas y medición.
+- `guion-video-corto.html`: estructurar guiones claros para vídeos breves.
+- `ia-creacion-contenido.html`: utilizar IA como apoyo con revisión humana.
+- `jornada-grabacion-videos.html`: coordinar una sesión de grabación.
+- `metricas-contenido-redes.html`: interpretar indicadores según objetivos.
+- `perfil-redes-sociales-empresa.html`: presentar el negocio de forma clara en su perfil.
+- `testimonios-clientes-redes.html`: compartir experiencias con consentimiento y contexto.
+- `voz-marca-redes-sociales.html`: establecer pautas de comunicación reconocibles.
+
+## Comentarios en el código
+
+Los comentarios HTML explican la estructura de las páginas y el propósito de los artículos. Los comentarios CSS agrupan reglas por componente o comportamiento visual. Los comentarios JavaScript describen las interacciones del menú, el formulario y las animaciones. Se mantienen en el código fuente y no aparecen como texto en la página publicada.
+
+## Ejecutar en local
+
+Abre el `index.html` de la raíz o inicia **Live Server** desde la carpeta del proyecto. También puedes abrir `web/index.html` directamente. No requiere instalación de dependencias ni un proceso de compilación.
+
+## Validación
+
+- HTML y CSS: pueden revisarse con el **Nu Html Checker** (el comprobador utilizado por el servicio `validator.w3.org/nu`). El proyecto se comprobó localmente con este validador.
+- JavaScript: no dispone de una validación W3C equivalente; conviene revisar los diagnósticos del editor y probar las interacciones en el navegador.
+- Antes de publicar cambios, comprueba los enlaces internos, las anclas de los artículos y la visualización en escritorio y móvil.
 
 ## Antes de publicar
 
-1. Sustituye `hola@tudominio.com` en `js/main.js` por el correo real de MARKIFAST.
+1. Sustituye `hola@tudominio.com` en `web/js/main.js` por el correo real de MARKIFAST.
 2. Añade los enlaces reales de redes sociales y los datos de contacto.
-3. La publicación de contenido en redes se presenta como un servicio sujeto a autorización del cliente; la recomendación de horarios y el análisis de resultados forman parte del proceso.
-4. El formulario usa `mailto:`: no almacena ni envía automáticamente la información. Para recibir consultas de forma fiable, conecta un backend o un proveedor de formularios y añade las medidas de privacidad necesarias.
-5. Revisa textos legales, política de privacidad, cookies y consentimiento según las tecnologías y datos que realmente utilicéis.
+3. La gestión de publicaciones depende de la autorización del cliente; sin ella, MARKIFAST recomienda horarios y analiza resultados, pero el cliente publica.
+4. El formulario utiliza `mailto:`: prepara un borrador en la aplicación de correo, no almacena ni envía datos a un servidor. Para recibir consultas de forma fiable, conecta un backend o un proveedor de formularios y añade las medidas de privacidad necesarias.
+5. Revisa los textos legales, la política de privacidad, las cookies y el consentimiento según las tecnologías y los datos que realmente se utilicen.
 6. La IA se presenta como apoyo para analizar tendencias; no garantiza viralidad ni sustituye la revisión humana. Sustituye las métricas ilustrativas por resultados reales antes de publicar casos de éxito.
-7. El proyecto contempla la creación de contenido en euskera para contribuir a la diversidad lingüística en redes sociales. La web aclara que el ODS 18 es una propuesta promovida en Euskadi y no un ODS oficial de la ONU.
+7. El ODS 18 se identifica como una propuesta promovida en Euskadi, no como uno de los 17 ODS oficiales de la ONU.
 
-## Alcance
+## Alcance técnico
 
-Página estática frontend con HTML semántico, CSS responsive y JavaScript para navegación móvil y preparación del email. No incorpora autenticación, base de datos, analítica ni backend.
+Sitio estático frontend hecho con HTML, CSS y JavaScript. No incorpora autenticación, base de datos, analítica ni backend.

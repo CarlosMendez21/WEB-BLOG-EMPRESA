@@ -1,6 +1,7 @@
 
-/* CABECERA DEL ARTÍCULO */
+/* Cabecera del artículo: retorno, ruta de navegación, título y autor. */
 
+/* El enlace permite volver al índice sin depender del historial del navegador. */
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -83,7 +84,7 @@
     line-height: 1.85;
 }
 
-/* AUTOR */
+/* Identificación visual del equipo editorial que firma el contenido. */
 
 .author {
     position: relative;
@@ -117,8 +118,9 @@
     color: var(--muted);
 }
 
-/* DISTRIBUCIÓN */
+/* Columna de lectura y tabla de contenidos con enlaces a secciones. */
 
+/* La tabla acompaña la lectura en escritorio y pasa al flujo normal en móvil. */
 .article-layout {
     display: grid;
     grid-template-columns: 210px minmax(0, 740px);
@@ -167,8 +169,9 @@
     color: var(--green-dark);
 }
 
-/* CONTENIDO */
+/* Tipografía y jerarquía del texto principal para facilitar la lectura. */
 
+/* El párrafo inicial resume la idea central antes de entrar en el desarrollo. */
 .article-content {
     min-width: 0;
     padding: clamp(26px, 5vw, 56px);
@@ -244,7 +247,7 @@
     color: #506b3d;
 }
 
-/* BLOQUES DESTACADOS */
+/* Llamadas destacadas, enlaces de cierre y navegación relacionada. */
 
 .article-callout {
     margin: 28px 0;
@@ -274,6 +277,7 @@
     margin: 10px 0 0;
 }
 
+/* El enlace final devuelve a la lista completa de publicaciones. */
 .article-end {
     margin-top: 42px;
     padding-top: 22px;
@@ -299,7 +303,7 @@
     border-color: #b7cba4;
 }
 
-/* RELACIONADOS */
+/* Tarjetas de otros artículos cuando una página incluye recomendaciones. */
 
 .related {
     padding-top: 55px;
@@ -348,7 +352,7 @@
     }
 }
 
-/* RESPONSIVE */
+/* Ajustes de distribución y tipografía para tabletas y teléfonos. */
 
 @media (max-width: 800px) {
     .article-header {

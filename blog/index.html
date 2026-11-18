@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,6 +31,7 @@
                 ☰
             </button>
 
+            <!-- Enlaces entre la web, sus servicios, el blog y el contacto. -->
             <div class="nav-links" id="nav-links">
                 <a href="../web/index.html">Inicio</a>
                 <a href="../web/index.html#servicios">Servicios</a>
@@ -45,7 +45,7 @@
 
     <main>
 
-        <!-- PRESENTACIÓN -->
+        <!-- Presentación editorial: explica el enfoque del blog antes del listado. -->
         <section class="hero container">
             <div class="hero-content">
                 <p class="eyebrow">
@@ -77,24 +77,103 @@
             </aside>
         </section>
 
-        <!-- ARTÍCULOS -->
+        <!-- Índice manual del blog: cada tarjeta enlaza a un artículo independiente. -->
         <section class="articles-section container"
                  id="articulos">
 
+            <!-- El total debe coincidir con las tarjetas publicadas en esta página. -->
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">NUESTRO BLOG</p>
                     <h2>Ideas para crear contenido con intención y personalidad.</h2>
                 </div>
 
+                <!-- El contador se mantiene junto al listado para orientar la navegación. -->
                 <p id="results-count" class="results-count"
                    aria-live="polite">
-                    10 artículos
+                    15 artículos
                 </p>
             </div>
 
+            <!-- Las tarjetas se ordenan de la fecha más reciente a la más antigua. -->
             <!-- GRID DE ARTÍCULOS -->
             <div class="articles-grid">
+
+                <!-- ARTÍCULO 15 -->
+                <article class="article-card" data-category="estrategia">
+                    <a href="posts/perfil-redes-sociales-empresa.html" class="article-cover cover-green">
+                        <span class="cover-label">ESTRATEGIA</span>
+                        <span class="cover-title">YOUR<br>PROFILE, CLEAR</span>
+                    </a>
+                    <!-- Metadatos, resumen y enlaces de lectura de la publicación. -->
+                    <div class="article-info">
+                        <div class="article-meta">ESTRATEGIA · 7 MIN</div>
+                        <p class="article-date"><time datetime="2026-11-18">18 de noviembre de 2026</time></p>
+                        <h3><a href="posts/perfil-redes-sociales-empresa.html">Qué debe incluir un buen perfil de empresa en redes sociales</a></h3>
+                        <p>Ayuda a quienes visitan tu perfil a entender qué haces, para quién y cómo dar el siguiente paso.</p>
+                        <a class="read-more" href="posts/perfil-redes-sociales-empresa.html">Leer artículo <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 14 -->
+                <article class="article-card" data-category="produccion">
+                    <a href="posts/jornada-grabacion-videos.html" class="article-cover cover-dark">
+                        <span class="cover-label">PRODUCCIÓN</span>
+                        <span class="cover-title">MAKE<br>SHOOT DAY COUNT</span>
+                    </a>
+                    <div class="article-info">
+                        <div class="article-meta">PRODUCCIÓN · 8 MIN</div>
+                        <p class="article-date"><time datetime="2026-11-17">17 de noviembre de 2026</time></p>
+                        <h3><a href="posts/jornada-grabacion-videos.html">Cómo organizar una jornada de grabación de contenido</a></h3>
+                        <p>Prepara guiones, recursos y tiempos para grabar varias piezas con orden y sin perder calidad.</p>
+                        <a class="read-more" href="posts/jornada-grabacion-videos.html">Leer artículo <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 13 -->
+                <article class="article-card" data-category="comunicacion">
+                    <a href="posts/voz-marca-redes-sociales.html" class="article-cover cover-peach">
+                        <span class="cover-label">COMUNICACIÓN</span>
+                        <span class="cover-title">SOUND<br>LIKE YOUR BRAND</span>
+                    </a>
+                    <div class="article-info">
+                        <div class="article-meta">COMUNICACIÓN · 7 MIN</div>
+                        <p class="article-date"><time datetime="2026-11-16">16 de noviembre de 2026</time></p>
+                        <h3><a href="posts/voz-marca-redes-sociales.html">Cómo definir la voz de tu marca en redes sociales</a></h3>
+                        <p>Establece pautas claras para comunicar con personalidad y coherencia en distintos formatos.</p>
+                        <a class="read-more" href="posts/voz-marca-redes-sociales.html">Leer artículo <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 12 -->
+                <article class="article-card" data-category="estrategia">
+                    <a href="posts/campana-lanzamiento-redes.html" class="article-cover cover-blue">
+                        <span class="cover-label">ESTRATEGIA</span>
+                        <span class="cover-title">LAUNCH<br>WITH A PLAN</span>
+                    </a>
+                    <div class="article-info">
+                        <div class="article-meta">ESTRATEGIA · 6 MIN</div>
+                        <p class="article-date"><time datetime="2026-11-15">15 de noviembre de 2026</time></p>
+                        <h3><a href="posts/campana-lanzamiento-redes.html">Cómo planificar un lanzamiento en redes sociales</a></h3>
+                        <p>Organiza el mensaje, las piezas y el seguimiento para presentar una novedad sin improvisar.</p>
+                        <a class="read-more" href="posts/campana-lanzamiento-redes.html">Leer artículo <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- ARTÍCULO 11 -->
+                <article class="article-card" data-category="comunicacion">
+                    <a href="posts/testimonios-clientes-redes.html" class="article-cover cover-lilac">
+                        <span class="cover-label">COMUNICACIÓN</span>
+                        <span class="cover-title">REAL<br>PEOPLE, REAL STORIES</span>
+                    </a>
+                    <div class="article-info">
+                        <div class="article-meta">COMUNICACIÓN · 5 MIN</div>
+                        <p class="article-date"><time datetime="2026-11-14">14 de noviembre de 2026</time></p>
+                        <h3><a href="posts/testimonios-clientes-redes.html">Cómo compartir testimonios de clientes con responsabilidad</a></h3>
+                        <p>Cuenta experiencias reales con consentimiento, contexto y sin prometer resultados universales.</p>
+                        <a class="read-more" href="posts/testimonios-clientes-redes.html">Leer artículo <span>↗</span></a>
+                    </div>
+                </article>
 
                 <!-- ARTÍCULO 10 -->
                 <article class="article-card" data-category="estrategia">
@@ -320,6 +399,7 @@
 
         </section>
 
+        <!-- Invitación a contactar con MARKIFAST después de leer los artículos. -->
         <!-- CTA -->
         <section class="cta-section">
             <div class="container cta-inner">

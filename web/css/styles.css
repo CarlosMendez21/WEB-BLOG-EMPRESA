@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* Tokens visuales compartidos por las secciones de la web corporativa. */
 :root {
   --ink: #17211d;
   --muted: #65716a;
@@ -10,6 +12,7 @@
   --ease-out: cubic-bezier(.2, .75, .25, 1);
 }
 
+/* Normaliza el modelo de caja y el comportamiento básico del documento. */
 * {
   box-sizing: border-box;
 }
@@ -40,6 +43,7 @@ a {
   padding-block: 112px;
 }
 
+/* Cabecera fija y navegación principal, con una variante desplegable en móvil. */
 .site-header {
   position: sticky;
   top: 0;
@@ -115,6 +119,7 @@ a {
   transform: scaleX(1);
 }
 
+/* Botones y enlaces de acción mantienen una jerarquía visual común. */
 .nav-cta {
   background: var(--ink);
   color: white;
@@ -147,6 +152,7 @@ a {
   color: #4d7b1c;
 }
 
+/* Hero: mensaje principal y panel conceptual del análisis de contenido. */
 .hero {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
@@ -354,6 +360,7 @@ a {
   overflow: visible;
 }
 
+/* Indicadores de muestra que acompañan a la ilustración del hero. */
 .metric-row {
   border-top: 1px solid #ffffff20;
   padding-top: 15px;
@@ -442,6 +449,7 @@ a {
   color: #18251f!important;
 }
 
+/* Banda animada que resume las áreas de trabajo de MARKIFAST. */
 .ticker {
   background: var(--green);
   overflow: hidden;
@@ -480,6 +488,7 @@ a {
   margin-top: 20px;
 }
 
+/* Tarjetas que presentan los servicios ofrecidos a autónomos y pymes. */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -551,6 +560,7 @@ a {
   color: #557b31;
 }
 
+/* Pasos del proceso: análisis, oportunidades, guion, producción y medición. */
 .method-section {
   background: var(--dark);
   color: #fff;
@@ -632,6 +642,7 @@ a {
   text-align: right;
 }
 
+/* Presentación de la propuesta, los principios y el equipo promotor. */
 .about-grid {
   display: grid;
   grid-template-columns: .85fr 1.15fr;
@@ -699,6 +710,7 @@ a {
   margin: 23px 0;
 }
 
+/* Tratamiento visual de principios y compromisos destacados. */
 .principles {
   border-top: 1px solid var(--line);
 }
@@ -734,6 +746,7 @@ a {
   color: #7d887e!important;
 }
 
+/* Compromisos de sostenibilidad, innovación y diversidad lingüística. */
 .team-section {
   background: #e8eee1;
 }
@@ -845,6 +858,7 @@ a {
   color: #45523e;
 }
 
+/* Área de contacto y nota de funcionamiento del formulario mailto. */
 .contact-section {
   background: #e8eee1;
 }
@@ -945,6 +959,7 @@ a {
   margin: 12px 0 0;
 }
 
+/* Pie de página: identidad de marca y navegación para volver arriba. */
 .footer {
   background: #17211d;
   color: white;
@@ -984,6 +999,7 @@ a {
   font-size: 9px;
 }
 
+/* Animaciones de entrada activadas por main.js y anuladas con movimiento reducido. */
 [data-reveal] {
   opacity: 0;
   transform: translateY(20px);
@@ -1013,6 +1029,7 @@ a {
   }
 }
 
+/* Ajustes intermedios para tabletas y pantallas de anchura reducida. */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -1238,6 +1255,7 @@ a {
 
 }
 
+/* Respeta las preferencias de movimiento reducido del sistema operativo. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
